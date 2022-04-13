@@ -34,21 +34,21 @@ services:
       - 8083:80
     restart: always
 
-  # picfit:
-  #   build:
-  #     context: .
-  #     dockerfile: ./.docker/picfit/Dockerfile
-  #   ports:
-  #     - 8084:3001
-  #   restart: always
-  #   environment:
-  #     - PICFIT_CONFIG_PATH=/config.json
+  picfit:
+    build:
+      context: ./docker/picfit/
+      dockerfile: Dockerfile
+    ports:
+      - 8084:3001
+    restart: always
+    environment:
+      - PICFIT_CONFIG_PATH=/config.json
 
-  # imageproxy:
-  #   image: ghcr.io/willnorris/imageproxy:v0.11.2
-  #   ports:
-  #     - 8085:8080
-  #   restart: always
-  #   environment:
-  #     - IMAGEPROXY_SCALEUP=true
+  imageproxy:
+    image: ghcr.io/willnorris/imageproxy:v0.11.2
+    ports:
+      - 8085:8080
+    restart: always
+    environment:
+      - IMAGEPROXY_SCALEUP=true
 

@@ -22,6 +22,6 @@ RUN apt-get update && apt-get install -y ca-certificates
 
 COPY --from=builder /picfit /picfit
 
-COPY ./.docker/picfit/config.json /config.json
+COPY config.json /config.json
 
 CMD ["/picfit"]
