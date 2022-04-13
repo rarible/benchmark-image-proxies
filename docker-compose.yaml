@@ -1,42 +1,54 @@
 version: '3.8'
 
 services:
+  origin:
+    build:
+      context: ./docker/origin
+      dockerfile: Dockerfile
+    ports:
+      - 8080:80
+    restart: always
+
   imgproxy:
     image: darthsim/imgproxy:v3.4.0
     ports:
-      - 8080:8080
+      - 8081:8080
     restart: always
     environment:
       - IMGPROXY_MAX_SRC_RESOLUTION=18.0
+      - IMGPROXY_LOG_LEVEL=warn
 
   thumbor:
-    image: minimalcompact/thumbor:7.0.0
-    ports:
-      - 8081:80
-    restart: always
-
-  picfit:
     build:
-      context: .
-      dockerfile: ./.docker/picfit/Dockerfile
+      context: ./docker/thumbor
+      dockerfile: Dockerfile
     ports:
-      - 8084:3001
+      - 8082:8888
     restart: always
-    environment:
-      - PICFIT_CONFIG_PATH=/config.json
-
-  imageproxy:
-    image: ghcr.io/willnorris/imageproxy:v0.11.2
-    ports:
-      - 8086:8080
-    restart: always
-    environment:
-      - IMAGEPROXY_SCALEUP=true
 
   weserv-images:
     build:
-      context: .
-      dockerfile: ./.docker/weserv-images/Dockerfile
+      context: ./docker/weserv-images
+      dockerfile: Dockerfile
     ports:
-      - 8088:80
+      - 8083:80
     restart: always
+
+  # picfit:
+  #   build:
+  #     context: .
+  #     dockerfile: ./.docker/picfit/Dockerfile
+  #   ports:
+  #     - 8084:3001
+  #   restart: always
+  #   environment:
+  #     - PICFIT_CONFIG_PATH=/config.json
+
+  # imageproxy:
+  #   image: ghcr.io/willnorris/imageproxy:v0.11.2
+  #   ports:
+  #     - 8085:8080
+  #   restart: always
+  #   environment:
+  #     - IMAGEPROXY_SCALEUP=true
+
