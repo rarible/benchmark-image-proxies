@@ -1,0 +1,45 @@
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient).....done
+
+
+Server Software:        nginx
+Server Hostname:        localhost
+Server Port:            8088
+
+Document Path:          /?url=https://raw.githubusercontent.com/mamchyts/benchmark-thumbnails/master/pexels-magda-ehlers.jpg&w=854&h=480&fit=cover
+Document Length:        112 bytes
+
+Concurrency Level:      5
+Time taken for tests:   25.435 seconds
+Complete requests:      50
+Failed requests:        40
+   (Connect: 0, Receive: 0, Length: 40, Exceptions: 0)
+Non-2xx responses:      10
+Keep-Alive requests:    50
+Total transferred:      978390 bytes
+HTML transferred:       953480 bytes
+Requests per second:    1.97 [#/sec] (mean)
+Time per request:       2543.519 [ms] (mean)
+Time per request:       508.704 [ms] (mean, across all concurrent requests)
+Transfer rate:          37.56 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.1      0       0
+Processing:     1 2346 1759.9   1975    6751
+Waiting:        1 2346 1759.9   1975    6751
+Total:          1 2346 1759.9   1975    6751
+
+Percentage of the requests served within a certain time (ms)
+  50%   1975
+  66%   2469
+  75%   2828
+  80%   4204
+  90%   5004
+  95%   6236
+  98%   6751
+  99%   6751
+ 100%   6751 (longest request)

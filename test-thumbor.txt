@@ -1,0 +1,43 @@
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient).....done
+
+
+Server Software:        Thumbor/7.0.0
+Server Hostname:        localhost
+Server Port:            8081
+
+Document Path:          /unsafe/854x480/https%3A%2F%2Fraw.githubusercontent.com%2Fmamchyts%2Fbenchmark-thumbnails%2Fmaster%2Fpexels-magda-ehlers.jpg
+Document Length:        28067 bytes
+
+Concurrency Level:      5
+Time taken for tests:   141.043 seconds
+Complete requests:      50
+Failed requests:        0
+Keep-Alive requests:    50
+Total transferred:      1417300 bytes
+HTML transferred:       1403350 bytes
+Requests per second:    0.35 [#/sec] (mean)
+Time per request:       14104.328 [ms] (mean)
+Time per request:       2820.866 [ms] (mean, across all concurrent requests)
+Transfer rate:          9.81 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.1      0       0
+Processing:  2819 13311 2609.8  14072   14262
+Waiting:     2819 13310 2609.9  14072   14262
+Total:       2819 13311 2609.8  14072   14262
+
+Percentage of the requests served within a certain time (ms)
+  50%  14072
+  66%  14097
+  75%  14127
+  80%  14148
+  90%  14212
+  95%  14238
+  98%  14262
+  99%  14262
+ 100%  14262 (longest request)

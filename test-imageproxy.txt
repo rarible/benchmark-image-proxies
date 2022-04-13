@@ -1,0 +1,43 @@
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient).....done
+
+
+Server Software:        
+Server Hostname:        localhost
+Server Port:            8086
+
+Document Path:          /854x480/https://raw.githubusercontent.com/mamchyts/benchmark-thumbnails/master/pexels-magda-ehlers.jpg
+Document Length:        68505 bytes
+
+Concurrency Level:      5
+Time taken for tests:   221.402 seconds
+Complete requests:      50
+Failed requests:        0
+Keep-Alive requests:    50
+Total transferred:      3446000 bytes
+HTML transferred:       3425250 bytes
+Requests per second:    0.23 [#/sec] (mean)
+Time per request:       22140.165 [ms] (mean)
+Time per request:       4428.033 [ms] (mean, across all concurrent requests)
+Transfer rate:          15.20 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.1      0       0
+Processing:  6086 21235 2443.0  21833   23815
+Waiting:     6083 21225 2442.1  21831   23806
+Total:       6087 21235 2443.0  21833   23815
+
+Percentage of the requests served within a certain time (ms)
+  50%  21833
+  66%  21934
+  75%  22092
+  80%  22164
+  90%  22365
+  95%  22725
+  98%  23815
+  99%  23815
+ 100%  23815 (longest request)

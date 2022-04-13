@@ -1,0 +1,43 @@
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient).....done
+
+
+Server Software:        imgproxy
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /insecure/rs:fill:854:480/el:true/g:ce:0:0/plain/https://raw.githubusercontent.com/mamchyts/benchmark-thumbnails/master/pexels-magda-ehlers.jpg
+Document Length:        24008 bytes
+
+Concurrency Level:      5
+Time taken for tests:   16.471 seconds
+Complete requests:      50
+Failed requests:        0
+Keep-Alive requests:    50
+Total transferred:      1216700 bytes
+HTML transferred:       1200400 bytes
+Requests per second:    3.04 [#/sec] (mean)
+Time per request:       1647.069 [ms] (mean)
+Time per request:       329.414 [ms] (mean, across all concurrent requests)
+Transfer rate:          72.14 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.1      0       0
+Processing:  1073 1504 450.8   1338    2629
+Waiting:     1072 1504 450.8   1338    2628
+Total:       1073 1504 450.8   1338    2629
+
+Percentage of the requests served within a certain time (ms)
+  50%   1338
+  66%   1506
+  75%   1544
+  80%   1971
+  90%   2381
+  95%   2525
+  98%   2629
+  99%   2629
+ 100%   2629 (longest request)
