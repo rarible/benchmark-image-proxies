@@ -15,7 +15,7 @@ services:
       - 8081:8080
     restart: always
     environment:
-      - IMGPROXY_MAX_SRC_RESOLUTION=18.0
+      - IMGPROXY_MAX_SRC_RESOLUTION=100.0
       - IMGPROXY_LOG_LEVEL=warn
 
   thumbor:
@@ -51,4 +51,12 @@ services:
     restart: always
     environment:
       - IMAGEPROXY_SCALEUP=true
+
+  ownproxy:
+    build:
+      context: ./docker/ownproxy/
+      dockerfile: Dockerfile
+    ports:
+      - 8086:8000
+    restart: always
 
