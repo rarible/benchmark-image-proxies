@@ -1,5 +1,3 @@
-# !!! thumbor is tested with 1 process
-
 Server Software:        Thumbor/7.0.8
 Server Hostname:        localhost
 Server Port:            8082
@@ -8,19 +6,46 @@ Document Path:          /unsafe/854x480/http://origin/1700KB.jpg
 Document Length:        28067 bytes
 
 Concurrency Level:      10
-Time taken for tests:   71.131 seconds
-Complete requests:      200
+Time taken for tests:   35.483 seconds
+Complete requests:      100
 Failed requests:        0
-Total transferred:      5664400 bytes
-HTML transferred:       5613400 bytes
-Requests per second:    2.81 [#/sec] (mean)
-Time per request:       3556.549 [ms] (mean)
-Time per request:       355.655 [ms] (mean, across all concurrent requests)
-Transfer rate:          77.77 [Kbytes/sec] received
+Total transferred:      2832200 bytes
+HTML transferred:       2806700 bytes
+Requests per second:    2.82 [#/sec] (mean)
+Time per request:       3548.291 [ms] (mean)
+Time per request:       354.829 [ms] (mean, across all concurrent requests)
+Transfer rate:          77.95 [Kbytes/sec] received
 
 Connection Times (ms)
-              min  mean[+/-sd] median   max
-Connect:        0    0   0.0      0       0
-Processing:   360 3461 469.8   3539    3749
-Waiting:      360 3461 469.8   3539    3749
-Total:        360 3461 469.8   3539    3749
+              min   avg   max
+Connect:        0     0    0
+Processing:   354  3353 3660
+Waiting:      354  3353 3660
+Total:        354  3353 3661
+
+---
+
+Server Software:        Thumbor/7.0.8
+Server Hostname:        localhost
+Server Port:            8082
+
+Document Path:          /unsafe/854x480/http://origin/17000KB.jpg
+Document Length:        85353 bytes
+
+Concurrency Level:      10
+Time taken for tests:   95.374 seconds
+Complete requests:      100
+Failed requests:        0
+Total transferred:      8560800 bytes
+HTML transferred:       8535300 bytes
+Requests per second:    1.05 [#/sec] (mean)
+Time per request:       9537.424 [ms] (mean)
+Time per request:       953.742 [ms] (mean, across all concurrent requests)
+Transfer rate:          87.66 [Kbytes/sec] received
+
+Connection Times (ms)
+              min   avg   max
+Connect:        0     0    0
+Processing:   962  897510293
+Waiting:      962  897510292
+Total:        963  897510293

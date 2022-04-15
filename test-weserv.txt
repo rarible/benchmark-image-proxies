@@ -2,23 +2,50 @@ Server Software:        nginx
 Server Hostname:        localhost
 Server Port:            8083
 
-Document Path:          /?url=http://origin/1700KB.jpg&w=854&h=480&fit=cover
-Document Length:        23809 bytes
+Document Path:          /?url=http://origin/1700KB.jpg&w=854&h=480
+Document Length:        22082 bytes
 
 Concurrency Level:      10
-Time taken for tests:   16.085 seconds
-Complete requests:      200
+Time taken for tests:   7.458 seconds
+Complete requests:      100
 Failed requests:        0
-Total transferred:      4856600 bytes
-HTML transferred:       4761800 bytes
-Requests per second:    12.43 [#/sec] (mean)
-Time per request:       804.252 [ms] (mean)
-Time per request:       80.425 [ms] (mean, across all concurrent requests)
-Transfer rate:          294.86 [Kbytes/sec] received
+Total transferred:      2255600 bytes
+HTML transferred:       2208200 bytes
+Requests per second:    13.41 [#/sec] (mean)
+Time per request:       745.843 [ms] (mean)
+Time per request:       74.584 [ms] (mean, across all concurrent requests)
+Transfer rate:          295.33 [Kbytes/sec] received
 
 Connection Times (ms)
-              min  mean[+/-sd] median   max
-Connect:        0    0   0.0      0       0
-Processing:   193  768 355.8    684    1796
-Waiting:      193  768 355.8    684    1796
-Total:        193  768 355.8    684    1797
+              min   avg   max
+Connect:        0     0    0
+Processing:   196   701 2109
+Waiting:      196   701 2109
+Total:        196   701 2110
+
+---
+
+Server Software:        nginx
+Server Hostname:        localhost
+Server Port:            8083
+
+Document Path:          /?url=http://origin/17000KB.jpg&w=854&h=480
+Document Length:        49421 bytes
+
+Concurrency Level:      10
+Time taken for tests:   11.908 seconds
+Complete requests:      100
+Failed requests:        0
+Total transferred:      4989700 bytes
+HTML transferred:       4942100 bytes
+Requests per second:    8.40 [#/sec] (mean)
+Time per request:       1190.774 [ms] (mean)
+Time per request:       119.077 [ms] (mean, across all concurrent requests)
+Transfer rate:          409.21 [Kbytes/sec] received
+
+Connection Times (ms)
+              min   avg   max
+Connect:        0     0    0
+Processing:   315  1106 3205
+Waiting:      315  1105 3205
+Total:        316  1106 3206

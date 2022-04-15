@@ -1,24 +1,52 @@
+
 Server Software:        imgproxy
 Server Hostname:        localhost
 Server Port:            8081
 
-Document Path:          /insecure/rs:fill:854:480/el:true/g:ce:0:0/plain/http://origin/1700KB.jpg
-Document Length:        24008 bytes
+Document Path:          /insecure/rs:fit:854:480/el:true/g:ce:0:0/plain/http://origin/1700KB.jpg
+Document Length:        22311 bytes
 
 Concurrency Level:      10
-Time taken for tests:   12.965 seconds
-Complete requests:      200
+Time taken for tests:   6.222 seconds
+Complete requests:      100
 Failed requests:        0
-Total transferred:      4859400 bytes
-HTML transferred:       4801600 bytes
-Requests per second:    15.43 [#/sec] (mean)
-Time per request:       648.227 [ms] (mean)
-Time per request:       64.823 [ms] (mean, across all concurrent requests)
-Transfer rate:          366.04 [Kbytes/sec] received
+Total transferred:      2260000 bytes
+HTML transferred:       2231100 bytes
+Requests per second:    16.07 [#/sec] (mean)
+Time per request:       622.204 [ms] (mean)
+Time per request:       62.220 [ms] (mean, across all concurrent requests)
+Transfer rate:          354.71 [Kbytes/sec] received
 
 Connection Times (ms)
-              min  mean[+/-sd] median   max
-Connect:        0    0   0.0      0       0
-Processing:   172  631 107.2    628     954
-Waiting:      172  631 107.2    628     953
-Total:        172  631 107.2    628     954
+              min   avg   max
+Connect:        0     0    0
+Processing:   216   589  961
+Waiting:      216   589  960
+Total:        216   589  961
+
+---
+
+Server Software:        imgproxy
+Server Hostname:        localhost
+Server Port:            8081
+
+Document Path:          /insecure/rs:fit:854:480/el:true/g:ce:0:0/plain/http://origin/17000KB.jpg
+Document Length:        49632 bytes
+
+Concurrency Level:      10
+Time taken for tests:   9.031 seconds
+Complete requests:      100
+Failed requests:        0
+Total transferred:      4992200 bytes
+HTML transferred:       4963200 bytes
+Requests per second:    11.07 [#/sec] (mean)
+Time per request:       903.111 [ms] (mean)
+Time per request:       90.311 [ms] (mean, across all concurrent requests)
+Transfer rate:          539.82 [Kbytes/sec] received
+
+Connection Times (ms)
+              min   avg   max
+Connect:        0     0    0
+Processing:   252   858 1388
+Waiting:      252   857 1388
+Total:        252   858 1388
