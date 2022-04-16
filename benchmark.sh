@@ -16,7 +16,7 @@ sleep 30
 
 # weserv
 ab -c10 -n100 -dSq 'localhost:8083/?url=http://origin/1700KB.jpg&w=854&h=480'   > test-weserv.txt
-echo -e '\n---\n'                                                                        >> test-weserv.txt
+echo -e '\n---\n'                                                              >> test-weserv.txt
 ab -c10 -n100 -dSq 'localhost:8083/?url=http://origin/17000KB.jpg&w=854&h=480' >> test-weserv.txt
 
 sleep 30

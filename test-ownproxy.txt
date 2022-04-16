@@ -1,4 +1,4 @@
-Server Software:        uvicorn
+Server Software:        Python/3.10
 Server Hostname:        localhost
 Server Port:            8086
 
@@ -6,26 +6,26 @@ Document Path:          /?url=http://origin/1700KB.jpg&img_w=854&img_h=480
 Document Length:        24813 bytes
 
 Concurrency Level:      10
-Time taken for tests:   7.183 seconds
+Time taken for tests:   6.935 seconds
 Complete requests:      100
 Failed requests:        0
-Total transferred:      2495300 bytes
+Total transferred:      2495200 bytes
 HTML transferred:       2481300 bytes
-Requests per second:    13.92 [#/sec] (mean)
-Time per request:       718.345 [ms] (mean)
-Time per request:       71.834 [ms] (mean, across all concurrent requests)
-Transfer rate:          339.23 [Kbytes/sec] received
+Requests per second:    14.42 [#/sec] (mean)
+Time per request:       693.477 [ms] (mean)
+Time per request:       69.348 [ms] (mean, across all concurrent requests)
+Transfer rate:          351.38 [Kbytes/sec] received
 
 Connection Times (ms)
               min   avg   max
 Connect:        0     0    0
-Processing:   188   675  884
-Waiting:      187   675  884
-Total:        188   675  884
+Processing:   195   650  816
+Waiting:      194   650  816
+Total:        195   650  816
 
 ---
 
-Server Software:        uvicorn
+Server Software:        Python/3.10
 Server Hostname:        localhost
 Server Port:            8086
 
@@ -33,19 +33,20 @@ Document Path:          /?url=http://origin/17000KB.jpg&img_w=854&img_h=480
 Document Length:        41886 bytes
 
 Concurrency Level:      10
-Time taken for tests:   9.795 seconds
+Time taken for tests:   9.338 seconds
 Complete requests:      100
 Failed requests:        0
-Total transferred:      4202600 bytes
+Total transferred:      4202500 bytes
 HTML transferred:       4188600 bytes
-Requests per second:    10.21 [#/sec] (mean)
-Time per request:       979.510 [ms] (mean)
-Time per request:       97.951 [ms] (mean, across all concurrent requests)
-Transfer rate:          419.00 [Kbytes/sec] received
+Requests per second:    10.71 [#/sec] (mean)
+Time per request:       933.805 [ms] (mean)
+Time per request:       93.381 [ms] (mean, across all concurrent requests)
+Transfer rate:          439.49 [Kbytes/sec] received
 
 Connection Times (ms)
               min   avg   max
-Connect:        0     0    0
-Processing:   247   918 1204
-Waiting:      246   918 1204
-Total:        247   918 1204
+Connect:        0     0    1
+Processing:   244   881 1160
+Waiting:      243   881 1160
+Total:        244   881 1160
+
