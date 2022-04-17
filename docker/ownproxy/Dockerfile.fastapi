@@ -1,0 +1,8 @@
+FROM python:3.10-slim-bullseye
+
+RUN pip install aiohttp pillow
+RUN pip install fastapi uvicorn
+
+ADD app*.py /
+
+CMD uvicorn app_fastapi:app --workers 1 --no-access-log --host 0.0.0.0

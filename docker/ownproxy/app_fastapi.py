@@ -1,42 +1,34 @@
-import asyncio, aiohttp, io
-from concurrent.futures.process import ProcessPoolExecutor
+# Pillow отпускает GIL внутри, поэтому треды скейлятся по ядрам. Удивительно, но эта имплементация на ~2% быстрее чем асинхронная
+import io, http.client
 from PIL import Image
 from fastapi import FastAPI, Response
 
 app = FastAPI()
 
-aioclient = aiohttp.ClientSession()
-
 def worker(img: bytes, img_w: int, img_h: int) -> bytes:
     result = io.BytesIO()
     result_img = Image.open(io.BytesIO(img))
     result_img.thumbnail((img_w, img_h))
-    result_img.save(result, format='JPEG')
+    result_img.save(result, result_img.format)
 
     return result.getvalue()
 
 
-async def run_in_process(fn, *args):
-    loop = asyncio.get_event_loop()
-    return await loop.run_in_executor(app.state.executor, fn, *args)  # wait and return result
-
-
 @app.get("/")
-async def handler(url: str, img_w: int, img_h: int):
-    res_img = b''
-    async with aioclient.get(url) as resp:
-        if resp.status == 200:
-            orig_img = await resp.read()
-            res_img = await run_in_process(worker, orig_img, img_w, img_h)
+def handler(url: str, img_w: int, img_h: int):
+    res_img = None
+    scheme, _, host_port, uri = url.split('/', 3)
+    if scheme.startswith('https'):
+        c = http.client.HTTPSConnection(host_port)
+    else:
+        c = http.client.HTTPConnection(host_port)
+    for _ in range(3):  # retry 3times
+        try:
+            c.request('GET', f'/{uri}')
+            res_img = worker(c.getresponse().read(), img_w, img_h)
+            break
+        except http.client.CannotSendRequest as e:
+            print('Error during getting the image from origin host: %s. Retrying..' % e)
+    c.close()
 
-    return Response(content=res_img, status_code=resp.status, media_type='image/jpg')
-
-
-@app.on_event("startup")
-async def on_startup():
-    app.state.executor = ProcessPoolExecutor()
-
-
-@app.on_event("shutdown")
-async def on_shutdown():
-    app.state.executor.shutdown()
+    return Response(content=res_img, media_type='image/jpg')
