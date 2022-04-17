@@ -1,6 +1,5 @@
 import asyncio, io
 from aiohttp import web, ClientSession
-from concurrent.futures.process import ProcessPoolExecutor
 # from concurrent.futures.process import ProcessPoolExecutor    # I get some bugs at freeing resources
 from concurrent.futures.thread import ThreadPoolExecutor
 from PIL import Image   # it releases GIL
