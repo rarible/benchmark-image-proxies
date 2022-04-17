@@ -1,0 +1,17 @@
+Server Software:        nginx/1.18.0
+Server Hostname:        localhost
+Server Port:            8087
+
+Document Path:          /?url=http://origin/1700KB.jpg&img_w=854&img_h=480
+Document Length:        24795 bytes
+
+Concurrency Level:      10
+Time taken for tests:   22.856 seconds
+Complete requests:      100
+Failed requests:        0
+Total transferred:      2503600 bytes
+HTML transferred:       2479500 bytes
+Requests per second:    4.38 [#/sec] (mean)
+Time per request:       2285.570 [ms] (mean)
+Time per request:       228.557 [ms] (mean, across all concurrent requests)
+Transfer rate:          106.97 [Kbytes/sec] received

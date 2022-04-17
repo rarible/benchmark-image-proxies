@@ -60,3 +60,11 @@ services:
       - 8086:8000
     restart: always
 
+  nginx_imgfilter:
+    build:
+      context: ./docker/nginx_imgfilter/
+      dockerfile: Dockerfile
+    ports:
+      - 8087:80
+    restart: always
+
