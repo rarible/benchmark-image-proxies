@@ -1,5 +1,7 @@
 #!/bin/bash
 
+apt install -y apache2-utils
+
 # imgproxy
 ab -c10 -n200 -dSq 'localhost:8081/insecure/rs:fit:854:480/el:true/g:ce:0:0/plain/http://origin/1700KB.jpg'   > test-imgproxy.txt
 echo -e '\n---\n'                                                                                            >> test-imgproxy.txt
