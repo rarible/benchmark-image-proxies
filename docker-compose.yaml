@@ -10,7 +10,7 @@ services:
     restart: always
 
   imgproxy:
-    image: darthsim/imgproxy:v3.4.0
+    image: darthsim/imgproxy:v3.16.1
     ports:
       - 8081:8080
     restart: always
