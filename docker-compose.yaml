@@ -10,7 +10,7 @@ services:
     restart: always
 
   imgproxy:
-    image: darthsim/imgproxy:v3.16.1
+    image: darthsim/imgproxy:v3.18.0
     ports:
       - 8081:8080
     restart: always
@@ -18,13 +18,15 @@ services:
       - IMGPROXY_MAX_SRC_RESOLUTION=100.0
       - IMGPROXY_LOG_LEVEL=warn
 
-  thumbor:
-    build:
-      context: ./docker/thumbor
-      dockerfile: Dockerfile
+  imagor:
+    image: shumc/imagor:latest
     ports:
-      - 8082:8888
+      - 8082:8000
     restart: always
+    environment:
+      - PORT=8000
+      - IMAGOR_UNSAFE=1 # unsafe URL for testing
+      #- FILE_STORAGE_BASE_DIR=/tmp # enable file storage by specifying base dir
 
   weserv-images:
     build:
